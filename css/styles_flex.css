@@ -1,0 +1,47 @@
+header {
+  text-align: center;
+}
+
+.Conteneur {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  border: 1px dotted black;
+}
+
+.Conteneur2 {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+  border: 1px dotted green;
+}
+
+div {
+  padding: 10px;
+  margin: 10px;
+}
+
+.id0 {
+  border: 1px solid red;
+}
+
+.id1, .id3 {
+  flex: 1;
+  border: 1px solid black;
+}
+
+.id2, .id4 {
+  flex: 0;
+  border: 1px solid grey;
+}
+
+p, ul {
+  margin-top: 20px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+li {
+  padding-left: 15px;
+}

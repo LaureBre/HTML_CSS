@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link type="text/css" href="css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<header>
+
+		<h1>Test de Flex sur des divisions</h1>
+		<p><a href="#Container">class="Conteneur"</a></p>
+		<p><strong>{ display: flex; }</strong></p>
+
+		</header>
+			<u>Sans</u> <strong>flex:</strong> dans les boîtes :
+			<div class="Conteneur">
+				<div class="id0">Boîte étroite 1</div>
+				<div class="id0">Boîboîte moyenne 2</div>
+				<div class="id0">Boîte étroite 3</div>
+				<div class="id0">Boîboîboîboîte longue 4</div>
+			</div>
+
+	    <p><strong>flex: 0;</strong> ça s'ajuste au plus serré</p>
+			<div class="Conteneur">
+				<div class="id2">Boîte étroite 1</div>
+				<div class="id2">Boîboîte moyenne 2</div>
+				<div class="id2">Boîte étroite 3</div>
+				<div class="id2">Boîboîboîboîte longue 4</div>
+			</div>
+
+		  <p><strong>flex: 1;</strong> ajuste pour une largeur égale des boîtes</p>
+	    <div class="Conteneur">
+	      <div class="id1">Boîte étroite 1</div>
+	      <div class="id1">Boîboîte moyenne 2</div>
+	      <div class="id1">Boîte étroite 3</div>
+	      <div class="id1">Boîboîboîboîte longue 4</div>
+	    </div>
+
+			<p><strong>flex: 1;</strong> avec du contenu qui déforme la belle largeur régulière de boîte qu'on avait auparavant :<br\>
+			ça s'ajuste de la façon la plus équilibrée possible avec la contrainte de permettre l'affichage du contenu.</p>
+			<div class="Conteneur">
+				<div class="id3">Boîte étroite 1</div>
+				<div class="id3">Boîboîte moyenne 2</div>
+				<div class="id3">Boîte étroite 3</div>
+				<div class="id3">Boîboîboîboîte longue 4</div>
+				<div class="id3">BoîboîboîboîboîboîteBoîboîboîboîboîboîteBoîboîboîboîboîboîte superlongue 5</div>
+			</div>
+
+		<ul id="Container">.Conteneur {
+			<li><strong>display: flex; </strong></li>
+			<li><strong>margin: auto;</strong></li>
+			<li>width: 80%; </li>
+			<li>border: 1px dotted black;</li>
+		} </ul>
+		<p>(<strong>margin:auto;</strong> pour centrer mon container dans la page)</p>
+		<ul>
+			div {
+			  <li>padding: 10px;</li>
+			  <li>margin: 10px;</li>
+			}
+		</ul>
+
+		<p>Et si, plutôt que les avoir côte à côte, on veut les empiler les unes au-dessus des autres ?</p>
+		<ul>
+			.conteneur2 {
+				<li><strong>flex-direction: column;</strong></li>
+			}
+		</ul>
+		<div class="Conteneur2">
+			<div class="id4">Boîte étroite 1</div>
+			<div class="id4">Boîboîte moyenne 2</div>
+			<div class="id4">Boîte étroite 3</div>
+			<div class="id4">Boîboîboîboîte longue 4</div>
+		</div>
+
+		<p>Bien sûr c'est l'affichage qu'on aurait sans flex du tout... Mais bon, ça peut permettre de changer d'avis ?</p>
+  </body>
+</html>
