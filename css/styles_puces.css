@@ -1,0 +1,115 @@
+* {
+  font-family: sans-serif;
+  font-size: 13px;
+  /* border: 1px dotted grey; */
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.Conteneur {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.Bande {
+  height: 32px;
+  width: 100%;
+  background-image: url("./../images/cheminPuces.png");
+  margin: 20px;
+}
+
+.Puce {
+  text-align: center;
+  margin:auto;
+}
+
+div {
+  flex: 1;
+}
+
+.ssPuce {
+  list-style-type: none;
+}
+
+.image {
+  list-style-image: url("../images/puce.png");
+}
+
+li {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+ #contentBefore li::before {
+  content: '> ';
+  color:red;
+}
+
+ #contentBefore li:before, #contentBeforeAfter li::before, #contentBeforeAfter li::after {
+  content: ' > ';
+  color:red;
+}
+
+#imageBefore li::before {
+  content: url("../images/puce.png");
+}
+
+.backgroundImage li {
+  background-image: url("../images/puce.png");
+}
+
+.imageNoRepeat li {
+  background-repeat: no-repeat;
+}
+
+.paddingImage li {
+  padding-left: 25px;
+}
+
+.caseHaute {
+  padding: 10px 35px;
+}
+
+#caseHaute {
+  padding: 10px 0px;
+}
+
+#deuxLignes li {
+  background-position: 0 50%;
+}
+
+#der li {
+  background-position: 0 50%;
+}
+
+.box {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+p {
+  margin: 0px;
+}
+
+main p:nth-of-type(2) {
+  font-family: monospace;
+}
+
+main p:nth-of-type(3), p:nth-of-type(4) {   /* applique à la xème (nth) occurence
+                        de l'élément de ce type (p) */
+  padding-left: 26px;
+  font-family: monospace;
+}
+
+main p:nth-child(3), p:nth-child(4), p:nth-child(5) {  /* applique au xème (nth)
+                        élément s'il est bien de ce type (p) */
+  color: blue;
+}

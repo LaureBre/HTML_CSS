@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link type="text/css" href="css/styles_puces.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<header>
+
+		<h1>Test de Puces</h1>
+		<p><strong>Listes < ul>< li>< /li>< /ul></strong></p>
+
+		</header>
+
+		<main>
+
+			<div class="Bande"></div>
+
+	    <div class="Conteneur"> <!--Conteneur 1-->
+
+	      <div> <!--Colonne 1-->
+	        <p>Liste de base :</p>
+	        <ul>ul
+	          <li>Item 1</li>
+	          <li>Item 2</li>
+	          <li>Item 3</li>
+	        </ul>
+	      </div>
+
+	      <div> <!--Colonne 2-->
+	        <p>Liste sans puces :</p>
+	        <ul class="ssPuce">ul
+	          <li>Item 1</li>
+	          <li>Item 2</li>
+	          <li>Item 3</li>
+	        </ul>
+	        <p>ul { list-style-type:</p>
+	           <p>none; }</p>
+	      </div>
+
+	      <div> <!--Colonne 3-->
+	        <p>Liste à image :</p>
+	        <ul class="image">ul
+	          <li>Item 1</li>
+	          <li>Item 2</li>
+	          <li>Item 3</li>
+	        </ul>
+	        <p>ul { list-style-image: </p>
+	        <p>url("puce.png"); }</p>
+	      </div>
+
+	    </div> <!--Conteneur-->
+
+			<div class="Bande"></div>
+
+	    <div class="Conteneur"> <!--Conteneur 2-->
+	      <div> <!--Colonne 1-->
+	        <p>Liste avec caractère en :before</p>
+	        <ul class="ssPuce" id="contentBefore">ul
+	          <li>Item 1</li>
+	          <li>Item 2</li>
+	          <li>Item 3</li>
+	        </ul>
+	        <p>#id1 li:before { content: '> '; color:red; }</p>
+	      </div>
+
+	      <div> <!--Colonne 2-->
+	        <p>Liste avec contenu avant et après :</p>
+	        <ul class="ssPuce" id="contentBeforeAfter">ul
+	          <li>Item 1</li>
+	          <li>Item 2</li>
+	          <li>Item 3</li>
+	        </ul>
+	        <p>#id2 li:before, li:after {
+	          <p>content: ' > ';</p>
+	          <p>color:red; }</p>
+	      </div>
+
+	      <div> <!--Colonne 3-->
+	        <p>Liste avec image en :before</p>
+	        <ul class="ssPuce" id="imageBefore">ul
+	          <li>Item 1</li>
+	          <li>Item 2</li>
+	          <li>Item 3</li>
+	        </ul>
+	        <p>#id3 li::before { content: </p>
+	          <p>url("../images/puce.png"); }</p>
+	      </div>
+	    </div> <!--Conteneur-->
+
+			<div class="Bande"></div>
+
+		  <div class="Conteneur"> <!--Conteneur 3-->
+		    <div> <!--Colonne 1-->
+		      <p>Liste avec background-image :</p>
+		      <ul class="ssPuce backgroundImage">ul
+		        <li>Item 1</li>
+		        <li>Item 2</li>
+		        <li>Item 3</li>
+		      </ul>
+		      <p></p>
+		        <p>url("../images/puce.png"); }</p>
+		    </div>
+
+		    <div> <!--Colonne 2-->
+		      <p>Pour éviter la répétition on ajoute</p>
+		      <ul class="ssPuce backgroundImage imageNoRepeat">ul
+		        <li>Item 1</li>
+		        <li>Item 2</li>
+		        <li>Item 3</li>
+		      </ul>
+		      <p>background-repeat: no-repeat;</p>
+		    </div>
+
+		    <div> <!--Colonne 3-->
+		      <p>Et pour ajuster la position :</p>
+		      <ul class="ssPuce backgroundImage imageNoRepeat paddingImage">ul
+		        <li>Item 1</li>
+		        <li>Item 2</li>
+		        <li>Item 3</li>
+		      </ul>
+		      <p>padding-left: 25px;</p>
+		    </div>
+
+		  </div> <!--Conteneur-->
+
+			<div class="Bande"></div>
+
+		  <div class="Conteneur"> <!--Conteneur 4-->
+
+		    <div> <!--Colonne 1-->
+		      <p>Et si notre "cellule" est plus haute que ça ?</p>
+		      <ul class="ssPuce backgroundImage imageNoRepeat paddingImage">ul
+		        <li>Cellule avec contenu<br/>sur 2 lignes</li>
+		        <li class="caseHaute">Cellule avec padding en hauteur</li>
+		        <li>Item 3</li>
+		      </ul>
+		      <center>L'image est alignée sur la première ligne</center>
+		    </div>
+
+		    <div> <!--Colonne 2-->
+		      <p>On peut ajuster "à la main" l'alignement vertical</p>
+		      <ul class="ssPuce backgroundImage imageNoRepeat paddingImage" id="deuxLignes">ul
+		        <li>Cellule avec contenu<br/>sur 2 lignes</li>
+		        <li class="caseHaute">Cellule avec padding en hauteur</li>
+		        <li>Item 3</li>
+		      </ul>
+		      <p>background-position: 0 50%;</p>
+		    </div>
+
+		    <div> <!--Colonne 3-->
+		      <p>On peut ajuster "à la main" l'alignement vertical</p>
+		      <p>Ca marche bien avec une puce :</p>
+		      <ul>ul
+		        <li><div class="box">| Cellule avec contenu<br/>| sur 2 lignes</div></li>
+		        <li><div class="box">| Cellule <br/>|  avec contenu<br/>| sur 3 lignes</div></li>
+		        <li><div class="box">| Cellule normale</div></li>
+		        <li id="caseHaute"><div class="box">| Cellule avec padding en hauteur</div></li>
+		      </ul>
+		      <p>.box { display: inline-block;</p>
+		        <p>vertical-align: middle; }</p>
+		    </div>
+
+		  </div> <!--Conteneur-->
+
+			<div class="Bande"></div>
+
+		  <div class="Conteneur"> <!--Conteneur 5-->
+
+				<div class="puce"><img src="./images/Puce128.png"></div>
+
+		    <div> <!--Colonne 4-->
+		      <p>La même chose sur une puce-background</p>
+		      <p>La taille de l'image décale un micro chouilla</p>
+		      <ul class="ssPuce backgroundImage imageNoRepeat paddingImage" id="der">ul
+		        <li><div class="box">| Cellule avec contenu<br/>| sur 2 lignes</div></li>
+		        <li><div class="box">| Cellule <br/>|  avec contenu<br/>| sur 3 lignes</div></li>
+		        <li><div class="box">| Cellule normale</div></li>
+		        <li class="caseHaute"><div class="box">| Cellule avec padding en hauteur</div></li>
+		      </ul>
+		      <p>background-position: 0 50%;</p>
+		    </div>
+
+				<div class="puce"><img src="./images/PuceVraie128.png"></div>
+
+		  </div> <!--Conteneur-->
+
+		</main>
+
+		<footer>
+			<div>
+				<h1>Conclusion</h1>
+				<p>L'alignement d'une puce-image se fait sur son bord inférieur.</p>
+				<p>Pour une image un peu haute par rapport à la police, mieux vaut utiliser une background-image</p>
+			</div>
+		</footer>
+
+  </body>
+</html>
