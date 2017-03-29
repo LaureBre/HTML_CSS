@@ -1,8 +1,20 @@
-header {
-  text-align: center;
+* {
   font-family: sans-serif;
 }
+header {
+  text-align: center;
+  background-image: url("./../images/flexible.png");
+  background-repeat: repeat-x;
+  min-height: 128px;
+}
 
+footer {
+  text-align: center;
+  background-image: url("./../images/flexible2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 128px;
+}
 .Conteneur {
   display: flex;
   width: 85%;
