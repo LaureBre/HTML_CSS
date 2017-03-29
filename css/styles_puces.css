@@ -31,6 +31,7 @@ h1 {
 
 div {
   flex: 1;
+  margin: 5px;
 }
 
 .ssPuce {
@@ -112,4 +113,8 @@ main p:nth-of-type(3), p:nth-of-type(4) {   /* applique à la xème (nth) occure
 main p:nth-child(3), p:nth-child(4), p:nth-child(5) {  /* applique au xème (nth)
                         élément s'il est bien de ce type (p) */
   color: blue;
+}
+
+footer p, h1 {
+  text-align: center;
 }
